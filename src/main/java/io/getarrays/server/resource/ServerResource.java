@@ -23,6 +23,7 @@ import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 @RequestMapping("/server")
 @RequiredArgsConstructor
 public class ServerResource {
+    
     private final ServerServiceImpl serverServiceImpl;
 
     @GetMapping("/list")
