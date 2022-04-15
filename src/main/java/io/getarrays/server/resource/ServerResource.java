@@ -23,7 +23,7 @@ import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 @RequestMapping("/server")
 @RequiredArgsConstructor
 public class ServerResource {
-    
+
     private final ServerServiceImpl serverServiceImpl;
 
     @GetMapping("/list")
@@ -95,7 +95,7 @@ public class ServerResource {
     @GetMapping(path = "/image/{fileName}", produces = IMAGE_PNG_VALUE)
     public byte[] getServerImage(@PathVariable("fileName") String fileName) throws IOException {
         return Files.readAllBytes(Paths.get(System.getProperty("user.home") +
-                "D:\\File abi\\Google Drive\\Kerjaan\\Belajar ngoding\\server-management-app\\server\\image" + fileName));
+                "/Downloads/images/" + fileName));
     }
 
 }
